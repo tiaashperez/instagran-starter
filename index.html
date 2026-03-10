@@ -1,59 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/dcit-web.appspot.com/o/a2main.css.css?alt=media&token=372ab3f9-ae18-4058-83ce-2253593a0555">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
 
-    <style>
-    
-      
-    </style>
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      display: inline-block;
+      background-color: white;
+      height: 54px;
+      width: 100%;
+      border: 1px solid #e5e5e5;
+      position: relative;
+    }
+
+    #logo {
+      height: 40px;
+      position: relative;
+    }
+
+    nav input {
+      height: 25px;
+      position: absolute;
+      width: 30vw;
+      left: 35vw;
+      color: black;
+      border: 1px solid #b5b5b5;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    #actions {
+      height: 40px;
+      position: absolute;
+      right: 0px;
+    }
+
+    #stories {
+      height: 90px;
+      width: 70vw;
+      margin: 10px auto;
+      border: 1px solid #b5b5b5;
+      border-radius: 2px;
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+    }
+
+    .user {
+      display: inline-block;
+      width: 18%;
+      text-align: center;
+      margin-right: 5px;
+    }
+
+    .user img {
+      margin-top: 5px;
+      border-radius: 50%;
+      border: 4px double #b5b5b5;
+      width: 56px;
+      height: 56px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .user p {
+      margin: 0;
+      font-weight: 100;
+      font-size: smaller;
+    }
+
+    .post {
+      border: 1px solid #b5b5b5;
+      width: 560px;
+      margin: 10px auto;
+    }
+
+    .post-header {
+      background-color: white;
+      height: 50px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 5px;
+      border-bottom: 1px solid #b5b5b5;
+      display: flex;
+      align-items: center;
+    }
+
+    .post-header img {
+      border-radius: 50%;
+      height: 40px;
+      border: 2px double gainsboro;
+      margin-right: 10px;
+    }
+
+    .post-header span {
+      font-weight: bold;
+    }
+
+    .post-image {
+      width: 100%;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-       
-        <img id="logo" src="img/instagran.png" alt="instagran logo" >
-    
-        <input type="text" placeholder="search"/>
+  <nav>
+    <img id="logo" src="img/instagran.png" alt="instagran logo">
+    <input type="text" placeholder="search"/>
+    <img id="actions" src="img/actions.png" alt="actions">
+  </nav>
 
-        <img id="actions" src="img/actions.png" alt="actions" >
-    </nav>
+  <section id="stories">
+    <div class="user">
+      <img src="img/gran1.jpg">
+      <p>Elma</p>
+    </div>
+    <div class="user">
+      <img src="img/gran2.jpg">
+      <p>Betty</p>
+    </div>
+    <div class="user">
+      <img src="img/gran3.jpg">
+      <p>Sandra</p>
+    </div>
+    <div class="user">
+      <img src="img/gran4.jpg">
+      <p>Delores</p>
+    </div>
+    <div class="user">
+      <img src="img/gran5.jpg">
+      <p>Karen</p>
+    </div>
+  </section>
 
-    <section id="stories">
-        <div class="user" id="mydiv">
-            <img src="img/gran1.jpg" >
-            <p class="userstory">Elma</p>
-        </div>
-        <div class="user">
-            <img src="img/gran2.jpg" >
-            <p class="userstory">Betty</p>
-        </div>
-        <div class="user">
-            <img src="img/gran3.jpg" >
-            <p class="userstory">Sandra</p>
-        </div>
-        <div class="user">
-            <img src="img/gran4.jpg" >
-            <p class="userstory">Delores</p>
-        </div>
+  <section class="post">
+    <div class="post-header">
+      <img src="img/gran1.jpg">
+      <span>Elma</span>
+    </div>
+    <div>
+      <img class="post-image" src="https://www.placecage.com/g/512/512" alt="cage image">
+    </div>
+  </section>
 
-        <div class="user">
-            <img src="img/gran5.jpg" >
-            <p class="userstory">Karen</p>
-        </div>
-    </section>
-
-    <section class="post">
-        <div class="post-header">
-            <img src="img/gran1.jpg"><span>Elma</span>
-        </div>
-        <div>
-            <img class="post-image" src="https://www.placecage.com/g/512/512" alt="cage image">
-        </div>
-    </section>
-
-    <footer></footer>
+  <footer></footer>
 </body>
 </html>
